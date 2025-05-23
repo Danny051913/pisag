@@ -135,6 +135,15 @@ CREATE TABLE IF NOT EXISTS information_topics (
   FOREIGN KEY (parent_id) REFERENCES information_topics(id) ON DELETE SET NULL
 );
 
+CREATE TABLE test_results (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  test_id VARCHAR(100) NOT NULL,
+  answers JSON NOT NULL,
+  score INT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Seed data
 -- Admin user (password: admin123)
 INSERT INTO users (name, email, password, role) VALUES 
