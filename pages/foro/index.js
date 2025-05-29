@@ -143,7 +143,19 @@ export default function Foro({ initialTopics, categories, totalPages }) {
           &larr; Volver al inicio
         </Link>
       </footer>
+
+      <a
+      href="https://www.nasa.gov"
+      className="boton-flotante"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Visita la NASA"
+    >
+      Satisfecho?
+    </a>
     </div>
+
+    
   )
 }
 
